@@ -1,3 +1,6 @@
+import string
+
+
 def removeBrackets(file):
     with open(file+'.txt') as infile, open(file+'_processed.txt', 'w+') as outfile:
         data = infile.read()
@@ -7,7 +10,7 @@ def removeBrackets(file):
         data = data.strip('\r')
         outfile.write(data)
 
-import string
+
 def removeCarriageReturn(file):
     with open(file+'.txt') as infile, open(file+'_cleaned.txt', "w+") as outfile:
         for line in infile:
@@ -17,10 +20,8 @@ def removeCarriageReturn(file):
             outfile.write(line)
 
 
-print("Running")
 # removeBrackets("davido_lyrics")
 # removeBrackets("wizkid_lyrics")
 
-removeCarriageReturn("davido_lyrics_processed")
-removeCarriageReturn("wizkid_lyrics_processed")
-print("Done")
+# removeCarriageReturn("davido_lyrics_processed")
+# removeCarriageReturn("wizkid_lyrics_processed")
