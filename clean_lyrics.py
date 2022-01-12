@@ -1,7 +1,7 @@
 import string
 
 
-def removeBrackets(file):
+def removeExtraFormatting(file):
     with open(file+'.txt') as infile, open(file+'_processed.txt', 'w+') as outfile:
         data = infile.read()
         print("just finished reading")
@@ -11,7 +11,7 @@ def removeBrackets(file):
         outfile.write(data)
 
 
-def removeCarriageReturn(file):
+def removeCarriageReturnAndPunctuation(file):
     with open(file+'.txt') as infile, open(file+'_cleaned.txt', "w+") as outfile:
         for line in infile:
             line = line.replace("\\n", ' ')
